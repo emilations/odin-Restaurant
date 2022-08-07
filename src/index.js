@@ -1,1 +1,4 @@
-console.log("Emileaaaaaaaae");
+import home from "./home"
+
+
+home();
