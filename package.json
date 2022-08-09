@@ -8,7 +8,7 @@
     "build": "webpack",
     "tailwind" : "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
     "watch": "webpack --watch",
-    "start": "webpack serve --open"
+    "start": "webpack & webpack serve --open"
   },
   "repository": {
     "type": "git",

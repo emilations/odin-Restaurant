@@ -2,19 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .right::before {
-  content: "";
-  background-image: url('image-2.jpg');
-  background-size: cover;
-  opacity: 0.5;
-  position: fixed;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  z-index: -1;   
-} */
-
 /* tailwind override css */
 .grid-custom-1 {
   grid-template-rows: 1fr;
