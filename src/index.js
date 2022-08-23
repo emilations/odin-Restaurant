@@ -1,20 +1,18 @@
-import { cacheNav, render } from "./pages";
+import { homepage, menu, contact } from "./pages";
 
 class Pages {
-  constructor(name, path) {
+  constructor(name) {
     this.name = name;
-    this.path = path;
     this.load = function () {
-      render(this);
-      cacheNav();
+      homepage.render();
     };
   }
 }
 
 let index = {
-  homepage: new Pages("homepage", "homepage.html"),
-  menu: new Pages("homepage", "menu.html"),
-  contact: new Pages("homepage", "contact.html"),
+  homepage: new Pages("homepage"),
+  menu: new Pages("menu"),
+  contact: new Pages("contact"),
 };
 
 index.homepage.load();
