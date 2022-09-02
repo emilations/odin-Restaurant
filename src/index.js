@@ -1,18 +1,10 @@
-import { homepage, menu, contact } from "./pages";
+import { homepage } from "./homepage";
+import { menu } from "./menu";
+import { contactUs } from "./contactUs";
 
-class Pages {
-  constructor(name) {
-    this.name = name;
-    this.load = function () {
-      homepage.render();
-    };
-  }
-}
+window.homepage = homepage
+window.menu = menu
+window.contactUs = contactUs
 
-let index = {
-  homepage: new Pages("homepage"),
-  menu: new Pages("menu"),
-  contact: new Pages("contact"),
-};
-
-index.homepage.load();
+// homepage.render()
+menu.render()

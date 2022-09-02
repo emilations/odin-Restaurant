@@ -704,6 +704,43 @@ video {
   position: fixed;
 }
 
+#nav2 {
+  width: 50%;
+  justify-self: end;
+}
+
+#div-width {
+  width: 80%;
+  display: flex;
+  margin: auto;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  background-color: rgb(255, 251, 235);
+}
+
+#plateAll {
+  padding: 2rem;
+  gap: 3rem;
+}
+
+.hero-small {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.hero-big {
+  font-size: 1.7rem;
+}
+
+h2 {
+  padding-top: 0.6rem;
+  font-weight: 800;
+}
+
+.details {
+  color: rgb(103, 103, 103);
+}
+
 .hover\:bg-gray-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
