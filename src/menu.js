@@ -53,7 +53,7 @@ let menu = (function () {
 
     let divWidth = document.createElement("div");
     divWidth.setAttribute("id", "div-width");
-    divWidth.classList.add("drop-shadow-lg", "rounded-lg")
+    divWidth.classList.add("drop-shadow-lg", "rounded-lg", "grid", "justify-center")
     divGrid.appendChild(divWidth);
 
     // MENU CONTAINER ---------------------------------------------------------

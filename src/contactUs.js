@@ -1,93 +1,88 @@
-let contactUs = function () {
-
+let contactUs = (function () {
   let render = function () {
     let divContent = document.querySelector("#content");
     divContent.replaceChildren();
 
-
-    // MAIN CONTENT
+    // MAIN CONTENT -----------------------------------------------------------
 
     let divHomepage = document.createElement("div");
-    divHomepage.classList.add("content", "h-screen", "font-sans")
+    divHomepage.classList.add("content", "h-screen", "font-sans");
     divHomepage.setAttribute("id", "homepage");
 
     let divGrid = document.createElement("div");
-    divGrid.classList.add("grid", "grid-cols-2", "h-full")
+    divGrid.classList.add("grid", "grid-cols-1");
 
-    divContent.appendChild(divHomepage)
-    divHomepage.appendChild(divGrid)
+    divContent.appendChild(divHomepage);
+    divHomepage.appendChild(divGrid);
 
-    // LEFT GRID
-
-    let divLeft = document.createElement("div");
-    divLeft.classList.add("left", "grid", "grid-cols-1", "grid-custom-1", "bg-amber-50")
-
-    let divInnerGrid = document.createElement("div");
-    divInnerGrid.classList.add("grid", "gap-10", "justify-items-center")
-
-    let divTitle = document.createElement("div");
-    divTitle.classList.add("text-xl")
-
-    divTitle.textContent = "EAT.com";
-
-    let divBanner = document.createElement("div");
-    divBanner.classList.add("text-xl")
-    divBanner.textContent = "Eat with us";
-
-    let buttonMenu = document.createElement("button");
-    buttonMenu.type = "button";
-    buttonMenu.classList.add("text-xl", "text-gray-900", "bg-white", "border", "border-gray-300", "focus:outline-none", "hover:bg-gray-100", "focus:ring-4", "focus:ring-gray-200", "font-medium", "rounded-lg", "text-sm", "px-5", "py-2.5", "dark:bg-gray-800", "dark:text-white", "dark:border-gray-600", "dark:hover:bg-gray-700", "dark:hover:border-gray-600", "dark:focus:ring-gray-700")
-    buttonMenu.innerText = "Contact Us page";
-
-    let divFooter = document.createElement("div");
-    divFooter.innerText = "Footer";
-
-    divGrid.appendChild(divLeft)
-    divLeft.appendChild(divInnerGrid)
-    divLeft.appendChild(divFooter)
-    divInnerGrid.appendChild(divTitle)
-    divInnerGrid.appendChild(divBanner)
-    divInnerGrid.appendChild(buttonMenu)
-
-    // RIGHT GRID
-
-    let divRight = document.createElement("div");
-    divRight.classList.add("right", "h-full", "shadow-2xl");
+    // NAV MENU ---------------------------------------------------------------
 
     let divNav = document.createElement("div");
-    divNav.setAttribute("id", "nav");
+    divNav.setAttribute("id", "nav2");
     divNav.classList.add("px-5", "py-3", "drop-shadow-lg");
- 
+    divGrid.appendChild(divNav);
+
     let divFlex = document.createElement("div");
-    divFlex.classList.add("flex", "justify-center", "w-full", "gap-7", "bg-amber-50", "py-2", "navi")
+    divFlex.classList.add(
+      "flex",
+      "justify-center",
+      "w-full",
+      "gap-7",
+      "bg-amber-50",
+      "py-2",
+      "navi"
+    );
+    divNav.appendChild(divFlex);
 
     let buttonNavHome = document.createElement("button");
     buttonNavHome.classList.add("text-xl");
     buttonNavHome.innerText = "Home";
+    divFlex.appendChild(buttonNavHome);
+
     let buttonNavMenu = document.createElement("button");
     buttonNavMenu.classList.add("text-xl");
     buttonNavMenu.innerText = "Menu";
+    divFlex.appendChild(buttonNavMenu);
+
     let buttonNavContact = document.createElement("button");
     buttonNavContact.classList.add("text-xl");
     buttonNavContact.innerText = "Contact";
+    divFlex.appendChild(buttonNavContact);
 
-    let divImage = document.createElement("div");
-    divImage.classList.add("image-background");
+    // WIDTH CONTAINER -------------------------------------------------------
 
-    let image = document.createElement("img");
-    image.setAttribute("id", "image-custom")
-    image.src = "image-2.jpg";
+    let divWidth2 = document.createElement("div");
+    divWidth2.setAttribute("id", "div-width2");
+    divWidth2.classList.add("grid", "drop-shadow-lg", "rounded-lg");
+    divGrid.appendChild(divWidth2);
 
-    divGrid.appendChild(divRight)
-    divRight.appendChild(divNav)
-    divNav.appendChild(divFlex)
+    // HERO DIV
 
-    divFlex.appendChild(buttonNavHome)
-    divFlex.appendChild(buttonNavMenu)
-    divFlex.appendChild(buttonNavContact)
+    let divHero = document.createElement("div");
+    divHero.setAttribute("id", "hero-container");
+    divHero.classList.add("place-self-end");
+    divWidth2.appendChild(divHero);
 
-    divRight.appendChild(divImage)
-    divImage.appendChild(image)
+    let textHero = document.createElement("p");
+    textHero.textContent = "Our story";
+    textHero.classList.add("hero-small");
+    divHero.appendChild(textHero);
+
+    // STORY DIV
+
+    let divStory = document.createElement("div");
+    divStory.setAttribute("id","story");
+    divStory.classList.add("place-self-end");
+    divStory.textContent =
+      "Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit amet, consectetur, adipisci[ng] velit, sed quia non numquam [do] eius modi tempora inci[di]dunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?";
+    divWidth2.appendChild(divStory);
+
+    // ADDRESS CONTACT
+
+    let divAddressContainer = document.createElement("div");
+    divAddressContainer.setAttribute("id", "address");
+    divAddressContainer.textContent = "emiasd";
+    divWidth2.appendChild(divAddressContainer);
   };
 
   let cacheNav = function () {
@@ -98,8 +93,8 @@ let contactUs = function () {
 
   return {
     render,
-    cacheNav
-  }
-}();
+    cacheNav,
+  };
+})();
 
 export { contactUs };

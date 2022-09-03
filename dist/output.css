@@ -718,6 +718,14 @@ video {
   background-color: rgb(255, 251, 235);
 }
 
+#div-width2 {
+  width: 80%;
+  margin: auto;
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: rgb(255, 251, 235);
+}
+
 #plateAll {
   padding: 2rem;
   gap: 3rem;
@@ -739,6 +747,10 @@ h2 {
 
 .details {
   color: rgb(103, 103, 103);
+}
+
+#story {
+  padding-top: 1.0rem;
 }
 
 .hover\:bg-gray-100:hover {

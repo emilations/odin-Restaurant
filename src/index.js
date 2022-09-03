@@ -7,4 +7,4 @@ window.menu = menu
 window.contactUs = contactUs
 
 // homepage.render()
-menu.render()
+contactUs.render()
