@@ -6,5 +6,5 @@ window.homepage = homepage
 window.menu = menu
 window.contactUs = contactUs
 
-// homepage.render()
+contactUs.cacheNav()
 contactUs.render()

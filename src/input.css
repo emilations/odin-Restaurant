@@ -72,3 +72,15 @@ h2 {
 #story {
   padding-top: 1.0rem;
 }
+
+#address {
+  display: grid;
+  padding-top: 1rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.label-right {
+  justify-self: end;
+  font-weight: 600;
+}

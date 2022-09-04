@@ -35,17 +35,18 @@ let contactUs = (function () {
     divNav.appendChild(divFlex);
 
     let buttonNavHome = document.createElement("button");
-    buttonNavHome.classList.add("text-xl");
+    buttonNavHome.classList.add("text-xl", "nav-button");
+    buttonNavHome.setAttribute("data-index", "Home")
     buttonNavHome.innerText = "Home";
     divFlex.appendChild(buttonNavHome);
 
     let buttonNavMenu = document.createElement("button");
-    buttonNavMenu.classList.add("text-xl");
+    buttonNavMenu.classList.add("text-xl", "nav-button");
     buttonNavMenu.innerText = "Menu";
     divFlex.appendChild(buttonNavMenu);
 
     let buttonNavContact = document.createElement("button");
-    buttonNavContact.classList.add("text-xl");
+    buttonNavContact.classList.add("text-xl", "nav-button");
     buttonNavContact.innerText = "Contact";
     divFlex.appendChild(buttonNavContact);
 
@@ -56,11 +57,10 @@ let contactUs = (function () {
     divWidth2.classList.add("grid", "drop-shadow-lg", "rounded-lg");
     divGrid.appendChild(divWidth2);
 
-    // HERO DIV
+    // HERO DIV -----------------------------------------------------------
 
     let divHero = document.createElement("div");
     divHero.setAttribute("id", "hero-container");
-    divHero.classList.add("place-self-end");
     divWidth2.appendChild(divHero);
 
     let textHero = document.createElement("p");
@@ -68,26 +68,48 @@ let contactUs = (function () {
     textHero.classList.add("hero-small");
     divHero.appendChild(textHero);
 
-    // STORY DIV
+    // STORY DIV -----------------------------------------------------------
 
     let divStory = document.createElement("div");
-    divStory.setAttribute("id","story");
+    divStory.setAttribute("id", "story");
+
     divStory.classList.add("place-self-end");
     divStory.textContent =
       "Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit amet, consectetur, adipisci[ng] velit, sed quia non numquam [do] eius modi tempora inci[di]dunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?";
     divWidth2.appendChild(divStory);
 
-    // ADDRESS CONTACT
+    // ADDRESS CONTACT -----------------------------------------------------
 
     let divAddressContainer = document.createElement("div");
     divAddressContainer.setAttribute("id", "address");
-    divAddressContainer.textContent = "emiasd";
     divWidth2.appendChild(divAddressContainer);
+
+    let labelAddress = document.createElement("p");
+    labelAddress.classList.add("label-right")
+    labelAddress.textContent = "Address:";
+    divAddressContainer.appendChild(labelAddress);
+
+    let valueAddress = document.createElement("p");
+    valueAddress.textContent = "1645 Friendship Lane";
+    divAddressContainer.appendChild(valueAddress);
+
+    let labelTelephone = document.createElement("p");
+    labelTelephone.classList.add("label-right")
+    labelTelephone.textContent = "Telephone:";
+    divAddressContainer.appendChild(labelTelephone);
+
+    let valueTelephone = document.createElement("p");
+    valueTelephone.textContent = "1 800-645-1120";
+    divAddressContainer.appendChild(valueTelephone);
+
   };
 
   let cacheNav = function () {
     document.addEventListener("DOMContentLoaded", function () {
-      let nav = document.querySelectorAll(".nav");
+      let nav = document.querySelectorAll(".nav-button");
+      nav.forEach((elem) => elem.addEventListener("click", (e) =>
+      console.log(e.srcElement.dataset.index)))
+      console.log("emile")
     });
   };
 
