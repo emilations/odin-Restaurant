@@ -102,20 +102,12 @@ let contactUs = (function () {
     valueTelephone.textContent = "1 800-645-1120";
     divAddressContainer.appendChild(valueTelephone);
 
-  };
+    console.log("loading done")
 
-  let cacheNav = function () {
-    document.addEventListener("DOMContentLoaded", function () {
-      let nav = document.querySelectorAll(".nav-button");
-      nav.forEach((elem) => elem.addEventListener("click", (e) =>
-      console.log(e.srcElement.dataset.index)))
-      console.log("emile")
-    });
   };
 
   return {
     render,
-    cacheNav,
   };
 })();
 

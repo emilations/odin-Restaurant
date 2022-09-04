@@ -44,6 +44,7 @@ let homepage = (function () {
     let buttonMenu = document.createElement("button");
     buttonMenu.type = "button";
     buttonMenu.classList.add(
+      "menu-Button-Hero",
       "text-xl",
       "text-gray-900",
       "bg-white",
@@ -96,17 +97,17 @@ let homepage = (function () {
     divNav.appendChild(divFlex);
 
     let buttonNavHome = document.createElement("button");
-    buttonNavHome.classList.add("text-xl");
+    buttonNavHome.classList.add("text-xl", "nav-button");
     buttonNavHome.innerText = "Home";
     divFlex.appendChild(buttonNavHome);
 
     let buttonNavMenu = document.createElement("button");
-    buttonNavMenu.classList.add("text-xl");
+    buttonNavMenu.classList.add("text-xl", "nav-button");
     buttonNavMenu.innerText = "Menu";
     divFlex.appendChild(buttonNavMenu);
 
     let buttonNavContact = document.createElement("button");
-    buttonNavContact.classList.add("text-xl");
+    buttonNavContact.classList.add("text-xl", "nav-button");
     buttonNavContact.innerText = "Contact";
     divFlex.appendChild(buttonNavContact);
 
@@ -118,17 +119,12 @@ let homepage = (function () {
     image.setAttribute("id", "image-custom");
     image.src = "image-2.jpg";
     divImage.appendChild(image);
-  };
 
-  let cacheNav = function () {
-    document.addEventListener("DOMContentLoaded", function () {
-      let nav = document.querySelectorAll(".nav");
-    });
-  };
+    console.log("loading done")
 
+  };
   return {
     render,
-    cacheNav,
   };
 })();
 

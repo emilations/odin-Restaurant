@@ -35,17 +35,17 @@ let menu = (function () {
     divNav.appendChild(divFlex);
 
     let buttonNavHome = document.createElement("button");
-    buttonNavHome.classList.add("text-xl");
+    buttonNavHome.classList.add("text-xl", "nav-button");
     buttonNavHome.innerText = "Home";
     divFlex.appendChild(buttonNavHome);
 
     let buttonNavMenu = document.createElement("button");
-    buttonNavMenu.classList.add("text-xl");
+    buttonNavMenu.classList.add("text-xl", "nav-button");
     buttonNavMenu.innerText = "Menu";
     divFlex.appendChild(buttonNavMenu);
 
     let buttonNavContact = document.createElement("button");
-    buttonNavContact.classList.add("text-xl");
+    buttonNavContact.classList.add("text-xl", "nav-button");
     buttonNavContact.innerText = "Contact";
     divFlex.appendChild(buttonNavContact);
 
@@ -209,17 +209,12 @@ let menu = (function () {
     menuCategory4Plate2Context.textContent =
       "Made with carrot, pineapple, coconuts, and raisins, with cream cheese frosting";
     menuCategory4.appendChild(menuCategory4Plate2Context);
-  };
 
-  let cacheNav = function () {
-    document.addEventListener("DOMContentLoaded", function () {
-      let nav = document.querySelectorAll(".nav");
-    });
+    console.log("loading done")
   };
 
   return {
     render,
-    cacheNav,
   };
 })();
 
