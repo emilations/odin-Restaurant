@@ -119,9 +119,6 @@ let homepage = (function () {
     image.setAttribute("id", "image-custom");
     image.src = "image-2.jpg";
     divImage.appendChild(image);
-
-    console.log("loading done")
-
   };
   return {
     render,

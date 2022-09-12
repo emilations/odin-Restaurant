@@ -101,9 +101,6 @@ let contactUs = (function () {
     let valueTelephone = document.createElement("p");
     valueTelephone.textContent = "1 800-645-1120";
     divAddressContainer.appendChild(valueTelephone);
-
-    console.log("loading done")
-
   };
 
   return {

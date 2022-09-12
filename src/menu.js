@@ -209,8 +209,6 @@ let menu = (function () {
     menuCategory4Plate2Context.textContent =
       "Made with carrot, pineapple, coconuts, and raisins, with cream cheese frosting";
     menuCategory4.appendChild(menuCategory4Plate2Context);
-
-    console.log("loading done")
   };
 
   return {

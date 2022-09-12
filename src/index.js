@@ -2,10 +2,6 @@ import { homepage } from "./homepage";
 import { menu } from "./menu";
 import { contactUs } from "./contactUs";
 
-function myFunction() {
-  console.log('emile')
-}
-
 let loadHomepage = function() {
   homepage.render();
   cacheNav();
@@ -23,7 +19,6 @@ let loadContactUs = function() {
 }
 
 function cacheNav() {
-  console.log("cache done");
   let nav = document.querySelectorAll(".nav-button");
   nav[0].addEventListener("click", loadHomepage)
   nav[1].addEventListener("click", loadMenu)
